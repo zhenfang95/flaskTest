@@ -1,0 +1,22 @@
+[2021-06-04 07:16:49.917121] INFO: app: 哈哈哈哈啊哈哈
+[2021-06-04 07:18:08.574916] INFO: app: 哈哈哈哈啊哈哈
+[2021-06-04 07:20:23.628815] INFO: app: 哈哈哈哈啊哈哈
+[2021-06-04 07:21:09.976856] INFO: app: 哈哈哈哈啊哈哈
+[2021-06-04 07:21:31.665880] INFO: Hello World: 哈哈哈哈啊哈哈
+[2021-06-04 07:32:34.601251] INFO: Hello World: 哈哈哈哈啊哈哈
+[2021-06-04 15:45:20.748104] INFO: Hello World: 哈哈哈哈啊哈哈
+[2021-06-04 19:38:35.590831] INFO: Hello World: 哈哈哈哈啊哈哈
+[2021-06-07 14:34:40.733687] ERROR: UserDao: 用户注册失败：用户名或邮箱已存在
+[2021-06-07 14:36:09.152664] ERROR: UserDao: 用户注册失败：用户名或邮箱已存在
+[2021-06-07 14:36:53.144854] ERROR: UserDao: 用户注册失败：用户名或邮箱已存在
+[2021-06-07 14:42:01.245199] ERROR: UserDao: 用户注册失败：用户名或邮箱已存在
+[2021-06-07 21:36:12.923862] ERROR: UserDao: 用户登陆失败：argument of type 'NoneType' is not iterable
+[2021-06-07 21:39:01.643053] ERROR: UserDao: 用户登陆失败：argument of type 'NoneType' is not iterable
+[2021-06-07 21:39:33.746738] ERROR: UserDao: 用户登陆失败：argument of type 'NoneType' is not iterable
+[2021-06-07 21:42:44.282293] ERROR: UserDao: 用户haha登陆失败：argument of type 'NoneType' is not iterable
+[2021-06-07 21:43:44.243183] ERROR: UserDao: 用户haha登陆失败：argument of type 'NoneType' is not iterable
+[2021-06-07 21:43:59.434280] ERROR: UserDao: 用户haha登陆失败：argument of type 'NoneType' is not iterable
+[2021-06-07 21:45:07.602103] ERROR: UserDao: 用户haha登陆失败：argument of type 'NoneType' is not iterable
+[2021-06-07 21:45:39.363927] ERROR: UserDao: 用户haha登陆失败：argument of type 'NoneType' is not iterable
+[2021-06-09 20:16:10.313112] ERROR: UserDao: 用户注册失败：用户名或邮箱已存在
+[2021-06-09 20:16:14.332670] ERROR: UserDao: 用户注册失败：用户名或邮箱已存在
