@@ -13,7 +13,7 @@ auth = Blueprint("auth",__name__,url_prefix="/auth")
 #这里以auth.route注册的函数都会自带/auth，所以url是/auth/register
 @auth.route("/register",methods=["POST"])
 def register():
-    #获取request请求数据
+    #以json格式获取request请求数据
     data = request.get_json()
     username,password = data.get("username"),data.get("password")
     if not username or not password:

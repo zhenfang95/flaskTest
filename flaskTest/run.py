@@ -2,9 +2,11 @@ from datetime import datetime
 from app import app
 from app.utils.logger import Log
 from app.controller.auth.user import auth
+from app.controller.request.http import req
 
 #注册蓝图
 app.register_blueprint(auth)
+app.register_blueprint(req)
 
 @app.route('/')
 def hello_world():

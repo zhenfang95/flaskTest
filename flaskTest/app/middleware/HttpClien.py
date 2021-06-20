@@ -20,9 +20,40 @@ class Request(object):
 
     @staticmethod
     def get_elapased(timer: datetime.timedelta):
+        #如果大于1s的请求响应时间，那我们以秒为单位显示，否则以毫秒为单位显示
         if timer.seconds > 0:
             return f"{timer.seconds}.{timer.microseconds // 1000}s"
         return f"{timer.microseconds // 100}ms"
 
     def request(self,method: str):
         status_code = 0
+        elapsed = "-1ms"
+        try:
+            if method.upper() == "GET":
+                response = self.client.get(self.url,**self.kwargs)
+            elif method.upper() == "post":
+                response = self.client.post(self.url, **self.kwargs)
+            else:
+                response = self.client.request(method,self.url,**self.kwargs)
+            status_code = response.status_code
+            if status_code != 200:
+                return Request.response(False,status_code)
+            elapsed = Request.get_elapased(response.elapsed)
+            data = response.json()
+            return Request.response(True, 200, data, response.headers, response.request.headers, elapsed=elapsed)
+        except Exception as e:
+            return Request.response(False, status_code, msg=str(e), elapsed=elapsed)
+
+    def post(self):
+        return self.request("POST")
+
+    @staticmethod
+    def response(status,status_code=200,response=None, response_header=None,
+                 request_header=None, elapsed=None, msg="success"):
+        request_header = {k: v for k,v in request_header.items()}
+        response_header = {k: v for k,v in response_header.items()}
+        return {
+            "status": status,"response":response,"status_code":status_code,
+            "request_header":request_header,"response_header":response_header,
+            "msg":msg,"elapsed":elapsed
+        }
